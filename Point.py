@@ -1,8 +1,8 @@
 '''
 Created on Nov 7, 2013
-
 @author: Ambarish Hazarnis
 '''
+
 class Point():
     """A Point is a single point in 2 dimensional space"""
     def __init__(self, new_x, new_y):
@@ -35,11 +35,11 @@ class Point():
     def closest_point(self, list_of_other_points):
         """Return the INDEX of the point that is closest to me (NOT the distance)
         """
-        min,i=1000,0
+        mins,i=1000,0
         for x in list_of_other_points:
             dist=self.distance_to(x)
-            if min > dist:
-                min=dist
+            if mins > dist:
+                mins=dist
                 index=i
             i+=1
         return index
